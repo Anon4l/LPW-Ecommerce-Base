@@ -4,6 +4,7 @@
     Author     : gutol
 --%>
 
+<%@page import="modelos.Produto"%>
 <%@page import="db.Mock"%>
 <%
     //Populando dados para teste
@@ -30,7 +31,7 @@
 
      <ul class="nav navbar-nav navbar-right">
         
-         <li type="button" class="btn btn-primary" data-toggle="modal" data-target="#cart">Carrinho (<span class="total-count"></span>)</button></li> 
+         <li type="button" class="btn btn-primary" data-toggle="modal" data-target="#cart">Carrinho (<span class="total-count"> </span> )</button></li> 
          <li> <button class="clear-cart btn btn-danger">Cancelar</button></li>
      
  

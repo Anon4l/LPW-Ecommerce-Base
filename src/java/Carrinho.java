@@ -33,9 +33,10 @@ public class Carrinho extends HttpServlet {
         HttpSession session=request.getSession();      // pega a sessão no servlet
       
        session.setAttribute("Carrinho",cartItem);      // Coloca o objeto numero P no atributo Carrinho da sessão
+        PrintWriter out = response.getWriter();
+        out.println(item);
         
-        
-        
+       
     }
 
  

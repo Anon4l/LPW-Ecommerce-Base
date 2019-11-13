@@ -31,14 +31,14 @@
             <h1>Ofertas da Loja!</h1>
             
             <div class="ofertas">
-                <c:forEach var="p" items="${Produtos.lista}">
+                <c:forEach var="p" items="${Produtos.lista}" varStatus="loop" >
                     <c:if test="${p.oferta}">
                         <div>
                             <h5> ${p.descricao} </h5>
                             <p> R$ ${p.preco} </p>
                             <img src="${p.imagem}">
                             <form action="Carrinho" method="post">  <!-- Envia por post a variavel P com o nome add para Carrinho-->
-                                <input name="add" value="${p}" class="add-to-cart btn btn-primary">Adicionar a carrinho
+                                <button name="add" value="${loop.index}" class="add-to-cart btn btn-primary">Adicionar a carrinho
                         </form>
                         </div>
                     </c:if>
