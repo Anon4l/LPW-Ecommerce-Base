@@ -4,6 +4,10 @@
     Author     : gutol
 --%>
 
+
+
+<%@page import="java.util.List"%>
+<%@page import="java.util.ArrayList"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
@@ -22,7 +26,7 @@
         </jsp:include>
         
         <jsp:useBean id="Produtos" class="modelos.Produto" />            
-        
+
         <div class="container">
             <h1>Ofertas da Loja!</h1>
             
@@ -32,14 +36,20 @@
                         <div>
                             <h5> ${p.descricao} </h5>
                             <p> R$ ${p.preco} </p>
-                            <img src="${p.imagem}"></img>
-                            <a href="#" data-name="${p.descricao}" data-price="${p.preco}" class="add-to-cart btn btn-primary">Adicionar a carrinho</a>
+                            <img src="${p.imagem}">
+                            <form action="Carrinho" method="post">  <!-- Envia por post a variavel P com o nome add para Carrinho-->
+                                <input name="add" value="${p}" class="add-to-cart btn btn-primary">Adicionar a carrinho
+                        </form>
                         </div>
                     </c:if>
                 </c:forEach>
             </div>
+          
+
         
         </div>
-        <script src="js/bootstrap.min.js"></script>
+        <script src="js/bootstrap.min.js"> 
+        </script>
+       
     </body>
 </html>
