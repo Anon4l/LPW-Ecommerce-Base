@@ -13,7 +13,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Minha Loja</title>
         <link rel="stylesheet" href="css/bootstrap.min.css">
-        <link rel="stylesheet" href="css/ofertas.css">
+        
     </head>
     <body>
         
@@ -33,6 +33,7 @@
                             <h5> ${p.descricao} </h5>
                             <p> R$ ${p.preco} </p>
                             <img src="${p.imagem}"></img>
+                            <a href="#" data-name="${p.descricao}" data-price="${p.preco}" class="add-to-cart btn btn-primary">Adicionar a carrinho</a>
                         </div>
                     </c:if>
                 </c:forEach>
