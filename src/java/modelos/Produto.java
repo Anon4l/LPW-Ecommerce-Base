@@ -16,6 +16,7 @@ public class Produto {
     private float preco;
     private boolean oferta;
     private String imagem;
+    private String info;
     public static ArrayList<Produto> lista = new ArrayList();
 
     public String getImagem() {
@@ -24,12 +25,12 @@ public class Produto {
 
     public void setImagem(String imagem) {
         this.imagem = imagem;
-    }        
-    
+    }
+
     public String getDescricao(){
         return this.descricao;
     }
-    
+
     public void setDescricao(String descricao){
         this.descricao = descricao;
     }
@@ -57,6 +58,15 @@ public class Produto {
     public void setOferta(boolean oferta) {
         this.oferta = oferta;
     }
-        
-    
+
+   public String getInfo() {
+      return this.info;
+   }
+
+   public void setInfo (String info) {
+      this.info = info;
+   }
+
+
+
 }

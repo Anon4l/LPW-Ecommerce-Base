@@ -1,4 +1,4 @@
-<%-- 
+<%--
     Document   : produto.jsp
     Created on : 30/10/2019, 17:30:56
     Author     : gutol
@@ -11,9 +11,9 @@
 <html>
     <head>
         <style>
-            
-            
-            
+
+
+
         </style>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Detalhes de Produto</title>
@@ -26,27 +26,28 @@
         </jsp:include>
         <jsp:useBean id="Produtos" class="modelos.Produto" />
         <div class="container">
-            
+
              <%
               int id =  Integer.parseInt(request.getParameter("id"));
               Produto p = Produto.lista.get(id);
-              String nome = p.getDescricao();   
-              
+              String nome = p.getDescricao();
+              String descricao = p.getInfo();
+
             %>
-            
-            
+
+
             <h1 align="center"><%=nome%></h1>
 
-          
-            
+
+
             <form action="AddCarrinho" method="post">
                 <label>Quantidade</label><input name="quantidade" >
                 <input name="id" value="<%=id%>" type="hidden">
-                
+
                 <button type="submit">OK</button>
             </form>
-            
+
         </div>
-        
+
     </body>
 </html>
